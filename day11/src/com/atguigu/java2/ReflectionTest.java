@@ -149,11 +149,11 @@ public class ReflectionTest {
          * 这里我们调用的是Person类中的 Person(String name,int age)构造器，固然需要传入对应的String.class, int.class
          */
         Constructor<Person> constructor = clazz.getDeclaredConstructor(String.class, int.class);
-        System.out.println(constructor);
+        System.out.println(constructor);    //打印输出：com.atguigu.java1.Person(java.lang.String,int)
         constructor.setAccessible(true);
         //此处输入对应的Person(String name,int age) 的内容
         Person tom = constructor.newInstance("Tom", 10);
-        System.out.println(tom);
+        System.out.println(tom);      //打印输出：Person{name='Tom', age=10, id=0}
     }
 
 }
