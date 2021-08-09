@@ -37,7 +37,7 @@ public class ReflectionTest {
         set():参数1：指明设置哪个对象的属性   参数2：将此属性值设置为多少
          */
 
-        id.set(p,1001);
+        id.set(p, 1001);
 
         /*
         获取当前属性的值
@@ -48,6 +48,7 @@ public class ReflectionTest {
 
 
     }
+
     /*
     如何操作运行时类中的指定的属性 -- 需要掌握
      */
@@ -64,7 +65,7 @@ public class ReflectionTest {
         //2.保证当前属性是可访问的
         name.setAccessible(true);
         //3.获取、设置指定对象的此属性值
-        name.set(p,"Tom");
+        name.set(p, "Tom");
 
         System.out.println(name.get(p));
     }
@@ -92,7 +93,7 @@ public class ReflectionTest {
         3. 调用方法的invoke():参数1：方法的调用者  参数2：给方法形参赋值的实参
         invoke()的返回值即为对应类中调用的方法的返回值。
          */
-        Object returnValue = show.invoke(p,"CHN"); //String nation = p.show("CHN");
+        Object returnValue = show.invoke(p, "CHN"); //String nation = p.show("CHN");
         System.out.println(returnValue);
 
         System.out.println("*************如何调用静态方法*****************");
@@ -130,6 +131,29 @@ public class ReflectionTest {
         Person per = (Person) constructor.newInstance("Tom");
         System.out.println(per);
 
+    }
+
+    /**
+     * 如何调用运行时类中的指定的构造器，自己稍作修改之后的版本
+     * @throws Exception
+     */
+    @Test
+    public void testConstructor2() throws Exception {
+        Class<Person> clazz = Person.class;
+
+        //private Person(String name)
+        /*
+         *1.获取指定的构造器
+         * getDeclaredConstructor():参数：指明构造器的参数列表
+         *
+         * 这里我们调用的是Person类中的 Person(String name,int age)构造器，固然需要传入对应的String.class, int.class
+         */
+        Constructor<Person> constructor = clazz.getDeclaredConstructor(String.class, int.class);
+        System.out.println(constructor);
+        constructor.setAccessible(true);
+        //此处输入对应的Person(String name,int age) 的内容
+        Person tom = constructor.newInstance("Tom", 10);
+        System.out.println(tom);
     }
 
 }
