@@ -5,22 +5,23 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- *
  * 动态代理的举例
+ * https://www.bilibili.com/video/BV1Kb411W75N?p=664
  *
  * @author shkstart
  * @create 2019 上午 10:18
  */
 
-interface Human{
+interface Human {
 
     String getBelief();
 
     void eat(String food);
 
 }
+
 //被代理类
-class SuperMan implements Human{
+class SuperMan implements Human {
 
 
     @Override
@@ -34,14 +35,14 @@ class SuperMan implements Human{
     }
 }
 
-class HumanUtil{
+class HumanUtil {
 
-    public void method1(){
+    public void method1() {
         System.out.println("====================通用方法一====================");
 
     }
 
-    public void method2(){
+    public void method2() {
         System.out.println("====================通用方法二====================");
     }
 
@@ -55,23 +56,23 @@ class HumanUtil{
 
  */
 
-class ProxyFactory{
+class ProxyFactory {
     //调用此方法，返回一个代理类的对象。解决问题一
-    public static Object getProxyInstance(Object obj){//obj:被代理类的对象
+    public static Object getProxyInstance(Object obj) {//obj:被代理类的对象
         MyInvocationHandler handler = new MyInvocationHandler();
 
         handler.bind(obj);
 
-        return Proxy.newProxyInstance(obj.getClass().getClassLoader(),obj.getClass().getInterfaces(),handler);
+        return Proxy.newProxyInstance(obj.getClass().getClassLoader(), obj.getClass().getInterfaces(), handler);
     }
 
 }
 
-class MyInvocationHandler implements InvocationHandler{
+class MyInvocationHandler implements InvocationHandler {
 
     private Object obj;//需要使用被代理类的对象进行赋值
 
-    public void bind(Object obj){
+    public void bind(Object obj) {
         this.obj = obj;
     }
 
@@ -85,7 +86,7 @@ class MyInvocationHandler implements InvocationHandler{
 
         //method:即为代理类对象调用的方法，此方法也就作为了被代理类对象要调用的方法
         //obj:被代理类的对象
-        Object returnValue = method.invoke(obj,args);
+        Object returnValue = method.invoke(obj, args);
 
         util.method2();
 
