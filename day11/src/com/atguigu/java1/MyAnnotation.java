@@ -6,7 +6,7 @@ import java.lang.annotation.Target;
 
 import static java.lang.annotation.ElementType.*;
 
-/**
+/**自定义注解
  * @author shkstart
  * @create 2019 下午 3:19
  */
