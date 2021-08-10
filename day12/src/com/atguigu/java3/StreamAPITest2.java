@@ -58,6 +58,12 @@ public class StreamAPITest2 {
         Stream<Double> salaryStream = employees.stream().map(e -> e.getSalary());
         Optional<Double> maxSalary = salaryStream.max(Double::compare);
         System.out.println(maxSalary);
+
+        //方法二：自己稍作修改
+        System.out.println("***************************");
+        Optional<Double> maxSalary1 = employees.stream().map(e -> e.getSalary()).max(Double::compare);
+        System.out.println(maxSalary1);
+
 //        min(Comparator c)——返回流中最小值
 //        练习：返回最低工资的员工
         Optional<Employee> employee = employees.stream().min((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary()));
