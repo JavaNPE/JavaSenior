@@ -54,6 +54,7 @@ public class StreamAPITest1 {
 //        map(Function f)——接收一个函数作为参数，将元素转换成其他形式或提取信息，该函数会被应用到每个元素上，并将其映射成一个新的元素。
         List<String> list = Arrays.asList("aa", "bb", "cc", "dd");
         list.stream().map(str -> str.toUpperCase()).forEach(System.out::println);
+//        list.stream().map(String::toUpperCase).forEach(System.out::println);  通过方法引用的方式改写
 
 //        练习1：获取员工姓名长度大于3的员工的姓名。
         List<Employee> employees = EmployeeData.getEmployees();
