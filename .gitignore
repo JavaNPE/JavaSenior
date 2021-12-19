@@ -1,0 +1,83 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+.gitignore
+.idea/
+"01_\345\244\232\347\272\277\347\250\213/.idea/"
+"01_\345\244\232\347\272\277\347\250\213/01.iml"
+"02_\345\244\232\347\272\277\347\250\213/02.iml"
+"03_\345\270\270\347\224\250\347\261\273/03.iml"
+"04_\345\270\270\347\224\250\347\261\273[\346\227\245\346\234\237]/04.iml"
+"05_\346\236\232\344\270\276\347\261\273\344\270\216\346\263\250\350\247\243/05.iml"
+"06_Collection\351\233\206\345\220\210/06.iml"
+"07_Map\351\233\206\345\220\210/07.iml"
+"08_\346\263\233\345\236\213\344\270\216 File/08.iml"
+"09_IO\346\265\201/09.iml"
+"10_IO\346\265\201\344\270\216\347\275\221\347\273\234\347\274\226\347\250\213/.idea/"
+"10_IO\346\265\201\344\270\216\347\275\221\347\273\234\347\274\226\347\250\213/10.iml"
+"11_\345\217\215\345\260\204/11.iml"
+"12_\345\212\250\346\200\201\344\273\243\347\220\206\344\270\216Java8 \346\226\260\347\211\271\346\200\247/.idea/"
+"12_\345\212\250\346\200\201\344\273\243\347\220\206\344\270\216Java8 \346\226\260\347\211\271\346\200\247/12.iml"
+"13_Java9&10&11\346\226\260\347\211\271\346\200\247/13.iml"
+JavaReflection/JavaReflection.iml
+JavaReflection/src/main/resources/
+JavaReflection/src/test/
+JavaReflection/target/
+JavaSenior.iml
+java9test/java9test.iml
+myproject03/.classpath
+myproject03/.project
+myproject03/.settings/
+myproject03/bin/
+myproject03/myproject03.iml
+out/production/01/
+out/production/02/
+out/production/03/
+out/production/04/
+out/production/05/
+out/production/06/
+out/production/07/
+out/production/08/
+out/production/09/
+out/production/10/
+out/production/11/
+out/production/12/
+out/production/13/
+out/production/JavaSenior/
+out/production/day01/
+out/production/day02/
+out/production/day04/
+out/production/day05/
+out/production/java9test/
+src/
