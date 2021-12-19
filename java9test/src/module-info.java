@@ -4,5 +4,5 @@
  */
 module java9test {
 
-    exports com.atguigu.bean;
+    exports com.youliao.bean;
 }
