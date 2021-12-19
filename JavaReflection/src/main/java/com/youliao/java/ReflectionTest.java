@@ -1,9 +1,7 @@
 package com.youliao.java;
 
-import com.sun.xml.internal.ws.runtime.config.TubelineFeatureReader;
 import org.junit.Test;
 
-import javax.naming.Name;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
