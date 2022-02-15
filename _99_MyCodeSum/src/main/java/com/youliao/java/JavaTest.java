@@ -1,6 +1,12 @@
 package com.youliao.java;
 
+import com.sun.media.jfxmedia.logging.Logger;
+import com.youliao.enums.EnumProductIdSummery;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Author Dali
@@ -8,6 +14,7 @@ import org.junit.Test;
  * @Version 1.0
  * @Description
  */
+@Slf4j
 public class JavaTest {
 	/**
 	 * Integer.parseInt()什么意思？
@@ -21,16 +28,23 @@ public class JavaTest {
 		System.out.println(str + 1);
 
 	}
-	public static enum MessageDirection {
-		SEND(1),
-		RECEIVE(2);
-	}
 
 	/**
 	 *
 	 */
+
 	@Test
 	public void  testEnum() {
+		List<String> productList = new ArrayList<>();
+		productList.add("NBCBZJD001");
+		boolean zjdFlag;
+		if (productList.contains(EnumProductIdSummery.NBCBZJD001.getCode())
+				|| productList.contains(EnumProductIdSummery.NBCBZJD003.getCode()))
+			zjdFlag = true;
+		else zjdFlag = false;
 
+		if (zjdFlag) {
+			System.out.println("Flag:"+zjdFlag);
+		}
 	}
 }

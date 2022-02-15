@@ -1,14 +1,17 @@
+/*
 package com.youliao.java;
 
 import com.youliao.enums.NumberForCaseEnum;
 import org.junit.Test;
 
+*/
 /**
  * @Author Dali
  * @Date 2021/12/22 10:20
  * @Version 1.0
  * @Description: constant expression required
- */
+ *//*
+
 public class SwitchNumberForCaseEnumTest {
 	@Test
 	public void test01() {
@@ -33,3 +36,4 @@ public class SwitchNumberForCaseEnumTest {
 		}
 	}
 }
+*/
