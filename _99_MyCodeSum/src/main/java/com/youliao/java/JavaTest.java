@@ -5,6 +5,7 @@ import com.youliao.enums.EnumProductIdSummery;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +15,7 @@ import java.util.List;
  * @Version 1.0
  * @Description
  */
-@Slf4j
+//@Slf4j
 public class JavaTest {
 	/**
 	 * Integer.parseInt()什么意思？
@@ -45,6 +46,14 @@ public class JavaTest {
 
 		if (zjdFlag) {
 			System.out.println("Flag:"+zjdFlag);
+		}
+	}
+
+	@Test
+	public void testBigDecimal() {
+		BigDecimal i = BigDecimal.ZERO;
+		if (i.compareTo(BigDecimal.ZERO)==0) {
+			System.out.println("******");
 		}
 	}
 }

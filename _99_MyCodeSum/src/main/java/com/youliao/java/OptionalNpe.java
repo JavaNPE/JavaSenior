@@ -1,10 +1,9 @@
 package com.youliao.java;
 
-import com.google.common.collect.Lists;
+//import com.google.common.collect.Lists;
 import com.youliao.bean.User;
 import org.junit.Test;
 
-import java.util.List;
 import java.util.Optional;
 
 /**
@@ -23,12 +22,12 @@ public class OptionalNpe {
 	 * （为了更好的理解，分开写了，比较庸俗，实际工作中都是一行搞定，哈哈哈）
 	 * 参考博客地址：https://blog.csdn.net/lxj_1993/article/details/109451567
 	 */
-	@Test
-	public void test1() {
-		List<String> list = null;
-		List<String> newList = Optional.ofNullable(list).orElse(Lists.<String>newArrayList());
-		newList.forEach(x -> System.out.println(x));
-	}
+//	@Test
+//	public void test1() {
+//		List<String> list = null;
+//		List<String> newList = Optional.ofNullable(list).orElse(Lists.<String>newArrayList());
+//		newList.forEach(x -> System.out.println(x));
+//	}
 
 	@Test
 	public void ifPresentTest() {
