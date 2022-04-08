@@ -56,4 +56,17 @@ public class JavaTest {
 			System.out.println("******");
 		}
 	}
+
+	@Test
+	public void testReturnNull() {
+		Object j = "hello";
+		for (int i = 0; i < 3; i++) {
+			if (true) {
+				System.out.println("***********");
+				j=null;
+			}
+			System.out.println("&&&&&&&&&&&&&&&");
+		}
+	}
+
 }
