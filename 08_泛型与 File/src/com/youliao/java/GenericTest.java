@@ -2,7 +2,11 @@ package com.youliao.java;
 
 import org.junit.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 /**
  *
@@ -41,10 +45,17 @@ public class GenericTest {
         for(Object score : list){
             //问题二：强转时，可能出现ClassCastException
             int stuScore = (Integer) score;
-
+//            int stuScore = score;
             System.out.println(stuScore);
 
         }
+
+        System.out.println("-----------使用java Stream 新特性进行便利集合操作------------");
+
+        list.stream().forEach((str) -> {
+            System.out.println(str);
+        });
+
 
     }
 
@@ -61,19 +72,26 @@ public class GenericTest {
 //        list.add("Tom");
 
         //方式一：
-//        for(Integer score : list){
-//            //避免了强转操作
-//            int stuScore = score;
-//
-//            System.out.println(stuScore);
-//
-//        }
+        for(Integer score : list){
+            //避免了强转操作
+            int stuScore = score;
+
+            System.out.println(stuScore);
+
+        }
+
+        System.out.println("------------------------");
         //方式二：
         Iterator<Integer> iterator = list.iterator();
         while(iterator.hasNext()){
             int stuScore = iterator.next();
             System.out.println(stuScore);
         }
+
+        System.out.println("-------------java Stream------------");
+        list.stream().forEach((str) -> {
+            System.out.println(str);
+        });
 
     }
 
