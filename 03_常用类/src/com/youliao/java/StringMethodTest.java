@@ -64,6 +64,32 @@ String[] split(String regex, int limit)：根据匹配给定的正则表达式�
         }
 
     }
+    @Test
+    public void testSplit() {
+        String str = "借据编号：00LI787947823749823468,客户名称：息费";
+        String[] split = str.split("：|,|：");
+        String loanInvoiceId = split[1];
+        System.out.println(loanInvoiceId);
+
+    }
+
+    @Test
+    public void testSplit02() {
+        String cmower = "沉默王二，一枚有趣的程序员";
+        if (cmower.contains("，")) {
+            String[] parts = cmower.split("，");
+            System.out.println("第一部分：" + parts[0] + " 第二部分：" + parts[1]);
+        } else {
+            throw new IllegalArgumentException("当前字符串没有包含逗号");
+        }
+
+        String cmower2 = "沉默王二.一枚有趣的程序员";
+        if (cmower.contains(".")) {
+            String [] parts = cmower2.split("\\.");
+            System.out.println("第一部分：" + parts[0] +" 第二部分：" + parts[1]);
+        }
+
+    }
 
     /*
 boolean endsWith(String suffix)：测试此字符串是否以指定的后缀结束
