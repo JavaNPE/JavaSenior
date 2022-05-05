@@ -1,4 +1,4 @@
-package com.youliao.java;
+package com.youliao.strategyPattern;
 
 import org.junit.Test;
 
