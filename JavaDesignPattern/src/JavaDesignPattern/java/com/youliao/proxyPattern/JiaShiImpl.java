@@ -7,10 +7,12 @@ package com.youliao.proxyPattern;
  * @Description
  */
 public class JiaShiImpl implements KindWomen {
+    @Override
     public void makeEyesWithMan() {
         System.out.println("贾氏高抛底售");
     }
 
+    @Override
     public void happyWithMan() {
         System.out.println("贾氏开开心心");
     }
